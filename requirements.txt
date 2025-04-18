@@ -1,0 +1,1 @@
+# Bu sistem için herhangi bir ek bağımlılık yoktur
