@@ -1,4 +1,3 @@
-streamlit_app_v2 = """
 import streamlit as st
 import pandas as pd
 from utils import calculate_score
@@ -27,10 +26,3 @@ if uploaded:
     for index, row in df.iterrows():
         score = calculate_score(row)
         st.success(f"**{row['name']}** → Skor: **{score:.2f}**")
-"""
-
-# Yeni streamlit_app.py dosyasını yaz
-with open("/mnt/data/streamlit_app.py", "w") as f:
-    f.write(streamlit_app_v2)
-
-"/mnt/data/streamlit_app.py başarıyla güncellendi (v2 aktif edildi)."
