@@ -9,7 +9,7 @@ st.title("🚀 SteveAnaliz – Yatırım Radar Paneli")
 companies = [
     {"name": "TechNova", "revenue": 120, "growth": 0.25, "rd_spending": 15},
     {"name": "DataWave", "revenue": 80, "growth": 0.32, "rd_spending": 12},
-    {"name": "NextAI", "revenue": 95, "growth": 0.29, "rd_spending": 18},
+    {"name": "NextAI", "revenue": 95, "growth": 0.29, "rd_spending": 18}
 ]
 
 st.subheader("📊 Şirket Skorları")
