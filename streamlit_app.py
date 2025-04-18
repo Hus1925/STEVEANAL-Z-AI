@@ -22,3 +22,11 @@ st.subheader("📁 Kendi Verinizi Yükleyin")
 uploaded = st.file_uploader("Bir CSV dosyası seçin", type="csv")
 if uploaded:
     st.info("🧠 Bu özellik v2 sürümünde aktif olacak.")
+import pandas as pd
+
+if uploaded:
+    df = pd.read_csv(uploaded)
+    st.subheader("📈 Yüklediğiniz Verilerin Skorları")
+    for index, row in df.iterrows():
+        score = calculate_score(row)
+        st.success(f"**{row['name']}** → Skor: **{score:.2f}**")
