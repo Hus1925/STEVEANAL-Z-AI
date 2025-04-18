@@ -1,5 +1,6 @@
-
+streamlit_app_v2 = """
 import streamlit as st
+import pandas as pd
 from utils import calculate_score
 
 st.set_page_config(page_title="SteveAnaliz Radar", page_icon="🚀")
@@ -21,12 +22,15 @@ st.divider()
 st.subheader("📁 Kendi Verinizi Yükleyin")
 uploaded = st.file_uploader("Bir CSV dosyası seçin", type="csv")
 if uploaded:
-    st.info("🧠 Bu özellik v2 sürümünde aktif olacak.")
-import pandas as pd
-
-if uploaded:
     df = pd.read_csv(uploaded)
     st.subheader("📈 Yüklediğiniz Verilerin Skorları")
     for index, row in df.iterrows():
         score = calculate_score(row)
         st.success(f"**{row['name']}** → Skor: **{score:.2f}**")
+"""
+
+# Yeni streamlit_app.py dosyasını yaz
+with open("/mnt/data/streamlit_app.py", "w") as f:
+    f.write(streamlit_app_v2)
+
+"/mnt/data/streamlit_app.py başarıyla güncellendi (v2 aktif edildi)."
